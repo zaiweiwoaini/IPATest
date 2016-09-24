@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "MBProgressHUD.h"
 @interface ViewController ()
 
 @end
@@ -16,8 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+button.frame=CGRectMake(100, 100, 100, 100);
+button.backgroundColor=[UIColor redColor];
+[self.view addSubview:button];
+[button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
 }
+-(void)click{
+    __weak typeof(self) weakSelf = self;
+    [MBProgressHUD showHUDAddedTo:weakSelf.view animated:YES];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+    });
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
