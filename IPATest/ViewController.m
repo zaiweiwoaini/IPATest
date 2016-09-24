@@ -16,11 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-button.frame=CGRectMake(100, 100, 100, 100);
-button.backgroundColor=[UIColor redColor];
-[self.view addSubview:button];
-[button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.frame=CGRectMake(100, 100, 100, 100);
+    button.backgroundColor=[UIColor redColor];
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
 }
 -(void)click{
     __weak typeof(self) weakSelf = self;

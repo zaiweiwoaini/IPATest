@@ -62,14 +62,3 @@ rm -rf $ZWBuildDir/temp
 
 
 open $HCIpaDir
-# -o ~/Desktop/$ZWScheme.ipa
-
-# #清除
-# rm -rdf "$buildDir"
-# rm -rdf "$distDir"
-# mkdir "$distDir"
-
-
-# xcodebuild -target "HCMedical" -configuration Release -showBuildSettings
-# xcodebuild -workspace "HCMedical.xcodeproj/project.xcworkspace" -scheme "HCMedical" -configuration Release
-# xcrun -sdk iphoneos -v PackageApplication /Users/zailonglong546/Documents/zaiMac/Work/PAPrj/Git/HCMedical_iOS/HCMedical/20160921_1729/Build/Products/Debug-iphoneos/HCMedical.app -o ~/Desktop/xxx.ipa
